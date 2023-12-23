@@ -235,6 +235,19 @@ bool displayWasUpdated = true;
 unsigned long int lastIncrementTime = 0;
 const short int incrementDelay = 200;
 
+// Define buzzer tones and variables
+enum BuzzerSounds {
+  movement = 0,
+  explosionSound = 1,
+  changeMwnuOption = 2
+};
+
+short int buzzerSounds[3] = { 200, 300, 1000 };
+short int buzzerSoundsDuration[3] = { 100, 100, 500 };
+
+bool soundStarted = false;
+unsigned long int lastSoundTime = 0;
+
 // A position is valid if it is inside the map and it is an empty tile
 bool positionIsValid(byte x, byte y) {
   return (x >= 0 && x < mapSize && y >= 0 && y < mapSize && gameMap[x][y] == empty);
@@ -1147,17 +1160,6 @@ void enterNameLogic() {
 }
 
 // Buzzer logic. Not so logical. At least the buzzer can be turned on and off
-enum BuzzerSounds {
-  movement = 0,
-  explosionSound = 1,
-  changeMwnuOption = 2
-};
-
-short int buzzerSounds[3] = { 200, 300, 1000 };
-short int buzzerSoundsDuration[3] = { 100, 100, 500 };
-
-bool soundStarted = false;
-unsigned long int lastSoundTime = 0;
 
 void myBuzz(byte soundId) {
   if (!soundOn) {
