@@ -33,6 +33,6 @@ Used components:
   - 2 x 220 Ω Resistor (one for the LCD and one for the buzzer)
   - Too many wires to count
 
-<img src="https://github.com/magiuli/MatrixProject width="500px">
+<img src="https://github.com/magiuli/MatrixProject/blob/main/Project/matrix_game.jpg" width="500px">
 
-<a href="">YouTube video</a>
+[![thumbnail](https://i3.ytimg.com/vi/MPQd76ecJY0/maxresdefault.jpg)](https://www.youtube.com/watch?v=MPQd76ecJY0)
